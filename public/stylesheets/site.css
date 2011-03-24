@@ -1,19 +1,53 @@
-body {
-  margin: 0 auto;
-  width: 1024px;
-  font-family: Arial, sans-serif;
-  font-size: 24px; }
-
-h1 {
-  margin: 0;
-  padding: 0;
-  background: url(/images/3fm.jpg) no-repeat center top;
-  height: 378px;
-  color: transparent; }
-
 .brand {
   text-transform: uppercase;
   font-weight: bold; }
   .brand .funky {
     color: #fd0300;
     margin: 0 1px; }
+
+body {
+  margin: 0 auto;
+  font-family: Arial, sans-serif; }
+
+h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  h1 img {
+    width: 200px; }
+
+p {
+  padding: 0 0.5em;
+  letter-spacing: 0.05em; }
+
+@media screen and (max-width: 200px) {
+  h1 img {
+    width: 100%; } }
+
+@media screen and (min-width: 480px) {
+  h1 img {
+    width: 240px; } }
+
+@media screen and (min-width: 640px) {
+  body {
+    width: 640px; }
+
+  h1 img {
+    width: 320px; } }
+
+@media screen and (min-width: 800px) {
+  body {
+    width: 800px;
+    font-size: 20px; }
+
+  h1 img {
+    width: 416px; } }
+
+@media screen and (min-width: 1200px) {
+  body {
+    width: 1000px;
+    font-size: 22px; } }
+
+@media screen and (min-width: 1400px) {
+  body {
+    width: 1200px; } }
