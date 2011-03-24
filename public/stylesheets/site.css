@@ -1,0 +1,19 @@
+body {
+  margin: 0 auto;
+  width: 1024px;
+  font-family: Arial, sans-serif;
+  font-size: 24px; }
+
+h1 {
+  margin: 0;
+  padding: 0;
+  background: url(/images/3fm.jpg) no-repeat center top;
+  height: 378px;
+  color: transparent; }
+
+.brand {
+  text-transform: uppercase;
+  font-weight: bold; }
+  .brand .funky {
+    color: #fd0300;
+    margin: 0 1px; }
