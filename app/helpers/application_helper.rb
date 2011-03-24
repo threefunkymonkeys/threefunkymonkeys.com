@@ -2,15 +2,9 @@ module ApplicationHelper
   def threefunkymonkeys
     content_tag(:span, :class => "brand") do
       raw(
-          content_tag(:span) do
-            "3"
-          end +
-          content_tag(:span, :class => "funky") do
-            "funky"
-          end +
-          content_tag(:span) do
-            "monkeys"
-          end
+          content_tag(:span, "3") +
+          content_tag(:span, "funky", :class => "funky")+
+          content_tag(:span, "monkeys")
           )
     end
   end
