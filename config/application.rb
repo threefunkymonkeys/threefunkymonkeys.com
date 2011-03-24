@@ -31,7 +31,7 @@ module ThreefunkymonkeysCom
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+    config.action_view.javascript_expansions[:defaults] = %w()
 
     config.generators do |g|
       g.template_engine :haml
