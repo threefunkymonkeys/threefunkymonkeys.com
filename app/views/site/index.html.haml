@@ -16,13 +16,15 @@
 %p
   Si queres estar al tanto de nuestros productos, dejanos tus datos
 
+.p
   =form_for(@contact) do |f|
-    = f.label :email
-    = f.email_field :email, :id => :email
-    = f.label :name
-    = f.text_field :name, :id => :name
-    = f.submit :id => :let_me_know
+    = f.email_field :email, :id => :email, :placeholder => t('.email')
+    = f.text_field :name, :id => :name, :placeholder => t('.name')
+    = f.submit t('.let_me_know'), :id => :let_me_know
 
 
-%div#footer
+.p.spaced
+  Tambien podes comunicarte con nosotros por Twitter, Tumbler o Email
+
+%div#footer.cleanLinks
   = render :partial => 'site/web_links'

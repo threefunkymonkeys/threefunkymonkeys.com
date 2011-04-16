@@ -18,7 +18,7 @@ h1
   img
     width: 200px
 
-p
+p, .p
   padding: 0 0.5em
   letter-spacing: 0.05em
 
@@ -26,11 +26,19 @@ p
   text-align: center
   font-size: 0.8em
 
+.cleanLinks
   a, a:visited
     color: #000
     text-decoration: none
   a:hover
     color: #fd0300
+
+.spaced
+  padding: 1em 0.55em
+
+input[type='text'], input[type='email'], input[type='password'], textarea
+  border: solid 1px black
+
 
 @media screen and (max-width: 200px)
   body
@@ -57,6 +65,15 @@ p
   h1
     img
       width: 320px
+
+  
+  input[type='text'], input[type='email'], input[type='password'], textarea
+    font-size: 0.7em
+    line-height: 0.7em
+
+  #footer
+    font-weight: bold
+    
 
 @media screen and (min-width: 800px)
   body
