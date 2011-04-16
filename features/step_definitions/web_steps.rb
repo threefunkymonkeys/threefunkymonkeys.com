@@ -50,7 +50,12 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
+  begin
+    click_button(button)
+  rescue Capybara::ElementNotFound
+    button = button.downcase.gsub(/ /, "_")
+    click_button(button)
+  end
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
@@ -58,7 +63,12 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+  begin
+    fill_in(field, :with => value)
+  rescue Capybara::ElementNotFound
+    field_name = field.downcase.gsub(/ /, "_")
+    fill_in(field_name, :with => value)
+  end
 end
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
