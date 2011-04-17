@@ -1,5 +1,7 @@
 %h1
-  %img{ :src => "/images/3fm.jpg", :alt => "3FUNKYMONKEYS", :title => "3 FUNKY MONKEYS" }
+  %img{ :src => "/images/3fm.jpg", :alt => "3FUNKYMONKEYS", :title => "THREE FUNKY MONKEYS" }
+
+= render :partial => "shared/flash", :locals => {:flash => flash, :objekt => @contact}
 
 %p
   #{threefunkymonkeys} surge de la necesidad que teníamos dos
@@ -12,27 +14,19 @@
   la manera más ágil y cómoda para trabajar.
 
 %p
-  Renegamos del mundo empresarial tradicional, aquel cuyos cánones
-  están basados en ideas de la Revolución Industrial. Vivimos una
-  nueva era cuya revolución llega incluso más lejos, donde el modelo
-  que separa al cliente y al proveedor como dos entidades diferentes
-  ya no funciona. Amamos nuestra profesión y queremos trabajar en
-  proyectos que nos despierten la misma pasión, involucrando todo el
-  tiempo a nuestros clientes, haciéndolo partícipe durante el proceso
-  de desarrollo, respetando su opinión y educándolo en la mejor manera
-  de sacar provecho a las tecnologías actuales y futuras.
+  Si queres estar al tanto de 
+  = link_to 'nosotros', about_path, :target => :blank
+  dejanos tus datos.
 
-%p
-  Vemos el avance y alcance arrollador de las tecnologías de
-  información en plataformas móviles como un desafio y un nicho para
-  aprovechar, sin descuidar las plataformas de escritorio que ocupan
-  también gran parte de nuestro día a día. Queremos llegar más lejos
-  de lo que nos atrevemos a imaginar, y llevar a nuestros clientes con
-  nosotros.
+.p
+  =form_for(@contact) do |f|
+    = f.email_field :email, :id => :email, :placeholder => t('.email')
+    = f.text_field :name, :id => :name, :placeholder => t('.name')
+    = f.submit t('.let_me_know'), :id => :let_me_know
 
-%div#footer
-  = link_to "blog", "http://blog.threefunkymonkeys.com/", :target => :blank
-  = " / "
-  = link_to "@3funkymonkeys", "https://twitter.com/3funkymonkeys", :target => :blank
-  = " / "
-  = mail_to "code@threefunkymonkeys.com"
+
+.p.spaced
+  Tambien podes comunicarte con nosotros por Twitter, Tumbler o Email
+
+%div#footer.cleanLinks
+  = render :partial => 'site/web_links'

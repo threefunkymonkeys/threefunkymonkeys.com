@@ -1,7 +1,12 @@
 ThreefunkymonkeysCom::Application.routes.draw do
-  get "site/index"
+  get "contact/create"
 
+  get "site/index"
+  
   root :to => "site#index"
+  
+  match "/about", :controller => :site, :action => :about, :as => :about
+  resources :contacts, :only => :create
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,14 @@
+- unless flash.empty?
+  - if flash[:notice] and not flash[:notice].empty?
+    #flashNotice
+      = flash[:notice]
+  - if flash[:warning] and not flash[:warning].empty?
+    #flashWarning
+      = flash[:warning]
+  - if flash[:error] and not flash[:error].empty?
+    #flashError
+      = flash[:error]
+      %ul.errors
+        - objekt.errors.each do |field, error|
+          %li= "#{field.to_s}: #{error.message}"
+
