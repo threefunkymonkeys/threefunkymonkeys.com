@@ -1,3 +1,10 @@
+$flash_notice_color: #16930B
+$flash_notice_bg_color: #B4F9A6
+$flash_warning_color: #D1AB12
+$flash_warning_bg_color: #F9F6B5
+$flash_error_color: #F90000
+$flash_error_bg_color: #F9C6C6
+
 .brand
   text-transform: uppercase
   font-weight: bold
@@ -39,6 +46,27 @@ p, .p
 input[type='text'], input[type='email'], input[type='password'], textarea
   border: solid 1px black
 
+
+#flashNotice, #flashWarning, #flashError
+  border: solid 1px
+  font-size: 0.7em
+  font-weight: bold
+  padding: 0.5em
+
+#flashNotice
+  border-color: $flash_notice_color
+  background-color: $flash_notice_bg_color
+  color: $flash_notice_color
+
+#flashWarning
+  border-color: $flash_warning_color
+  background-color: $flash_warning_bg_color
+  color: $flash_warning_color
+
+#flashError
+  border-color: $flash_error_color
+  background-color: $flash_error_bg_color
+  color: $flash_error_color
 
 @media screen and (max-width: 200px)
   body
