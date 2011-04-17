@@ -2,6 +2,7 @@ es:
   application:
     messages:
       thank_you: Gracias visitarnos! Te mantendremos al tanto de las novedades!
+      invalid_email: El e-mail es inválido.
 
   site:
     index:

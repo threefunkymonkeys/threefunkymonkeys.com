@@ -4,11 +4,16 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { flash[:notice] = t('application.messages.thank_you') }
+        format.html do 
+          flash[:notice] = t('application.messages.thank_you') 
+          redirect_to root_path
+        end
       else
-        format.html { flash[:error] = t('application.messages.contact_error') }
+        format.html do
+          flash[:error] = t('application.messages.invalid_email')
+          redirect_to root_path
+        end
       end
     end
-    redirect_to root_path
   end
 end

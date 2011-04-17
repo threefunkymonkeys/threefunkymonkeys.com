@@ -4,3 +4,7 @@
   = flash[:warning]
 #flashError
   = flash[:error]
+  %ul
+    - objekt.errors.each do |field, error|
+      %li= "#{field.to_s}: #{error.message}"
+
