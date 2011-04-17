@@ -14,19 +14,22 @@
   la manera más ágil y cómoda para trabajar.
 
 %p
-  Si queres estar al tanto de 
+  Si queres estar al tanto de las novedades o conocer mas de
   = link_to 'nosotros', about_path, :target => :blank
-  dejanos tus datos.
+  dejanos tus datos. Te prometemos mantener tu privacidad y no
+  utilizar tus datos con fines deshonestos.
 
 .p
-  =form_for(@contact) do |f|
+  = form_for(@contact) do |f|
     = f.email_field :email, :id => :email, :placeholder => t('.email')
     = f.text_field :name, :id => :name, :placeholder => t('.name')
     = f.submit t('.let_me_know'), :id => :let_me_know
 
-
 .p.spaced
-  Tambien podes comunicarte con nosotros por Twitter, Tumbler o Email
+  Si lo preferís podés comunicarte con nosotros directamente vía
+  #{mail_to "code@threefunkymonkeys.com", "correo electrónico"} o seguirnos en
+  #{link_to "Twitter", "https://twitter.com/3funkymonkeys", :target => :_blank} y en
+  #{link_to "Tumblr", "http://blog.threefunkymonkeys.com/", :target => :_blank}.
 
 %div#footer.cleanLinks
   = render :partial => 'site/web_links'

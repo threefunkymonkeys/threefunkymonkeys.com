@@ -1,11 +1,11 @@
 es:
   application:
     messages:
-      thank_you: Gracias visitarnos! Te mantendremos al tanto de las novedades!
-      invalid_email: El e-mail es inválido.
+      thank_you: ¡Gracias visitarnos, te mantendremos al tanto de las novedades!
+      invalid_email: El email ingresado es inválido.
 
   site:
     index:
-      email: E-mail
+      email: Email
       name:  Nombre
       let_me_know: Avisame
