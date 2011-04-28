@@ -1,6 +1,4 @@
-%h1
-  =image_tag "/images/3fm.jpg", :alt => "3FUNKYMONKEYS", :title => "THREE FUNKY MONKEYS"
-
+= render :partial => 'shared/header'
 = render :partial => "shared/flash", :locals => {:flash => flash, :objekt => @contact}
 
 %p
