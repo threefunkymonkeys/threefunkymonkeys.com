@@ -6,12 +6,8 @@
     = stylesheet_link_tag :all
     = csrf_meta_tag
   %body
-    %header
-      %h1
-        %a{ :href => "/" }
-          %img{ :src => "/images/3fm.jpg", :alt => "3FUNKYMONKEYS", :title => "THREE FUNKY MONKEYS" }
-
-    = yield
+    .container
+      = yield
 
     :javascript
       var _gaq = _gaq || [];
