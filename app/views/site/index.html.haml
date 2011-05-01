@@ -4,6 +4,8 @@
     programadores y un diseñador de desarrollar herramientas avanzadas y
     utilizando las últimas tecnologías disponibles para el caso.
 
+  %br
+
   %p
     Como buenos <em>geeks</em> sentimos la necesidad de ampliar nuestros
     conocimientos y compartirlo con el resto del mundo, buscando siempre
@@ -17,13 +19,12 @@
     = link_to 'nosotros', about_path
     dejanos tus datos. Te prometemos mantener tu privacidad y no utilizar tus datos con fines deshonestos.
 
-  .p.center
+  %br
+  .p.center.spaced
     = form_for(@contact) do |f|
       = f.email_field :email, :id => :email, :placeholder => t('.email')
       %br
-      %br
       = f.text_field :name, :id => :name, :placeholder => t('.name')
-      %br
       %br
       = f.submit t('.let_me_know').upcase, :id => :let_me_know
 
