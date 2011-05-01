@@ -1,10 +1,3 @@
-$flash_notice_color: #16930B
-$flash_notice_bg_color: #B4F9A6
-$flash_warning_color: #D1AB12
-$flash_warning_bg_color: #F9F6B5
-$flash_error_color: #F90000
-$flash_error_bg_color: #F9C6C6
-
 @import "partials/base"
 
 .brand
@@ -17,7 +10,7 @@ $flash_error_bg_color: #F9C6C6
 body
   margin: 0
   font:
-    family: Arial, sans-serif
+    family: Tahoma, Verdana, Arial, sans-serif
 
 h1
   margin: 0
@@ -28,8 +21,11 @@ h1
     width: 200px
 
 p, .p
-  padding: 0 0.5em
+  padding: 1em 0.5em
   letter-spacing: 0.05em
+  text-align: center
+  font-size: 0.8em
+  z-index: 1
 
 #footer
   text-align: center
@@ -44,6 +40,15 @@ p, .p
 
 .spaced
   padding: 1em 0.55em
+
+.half
+  width: 50%
+  left: 25%
+  position: relative
+
+#homeContainer
+  width: 100%
+  text-align: center
 
 input[type='text'], input[type='email'], input[type='password'], textarea
   border: solid 1px black
@@ -70,6 +75,22 @@ input[type='text'], input[type='email'], input[type='password'], textarea
   background-color: $flash_error_bg_color
   color: $flash_error_color
 
+.topBar
+  background-color: $top_bar_bg_color
+  border-bottom: solid 2px $top_bar_border_color
+  height: 15px
+  width: 100%
+  position: absolute
+  left: 0px
+  
+#contact_bg
+  width: 100%
+
+
+header
+  position: relative
+  top: 20px
+
 @media screen and (max-width: 200px)
   body
     padding: 0 0.25em
@@ -78,6 +99,7 @@ input[type='text'], input[type='email'], input[type='password'], textarea
     img
       width: 100%
 
+
 @media screen and (min-width: 480px)
   body
     padding: 0 0.5em
@@ -85,6 +107,9 @@ input[type='text'], input[type='email'], input[type='password'], textarea
   h1
     img
       width: 240px
+
+  #contact_bg
+    width: 100%
 
 @media screen and (min-width: 640px)
   body
