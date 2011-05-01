@@ -30,6 +30,14 @@ p, .p
 #footer
   text-align: center
   font-size: 0.8em
+  width: 100%
+  background-color: $footer_bg_color
+  color: $footer_color
+  a
+    color: $footer_color
+    &:hover
+      color: $footer_color
+
 
 .cleanLinks
   a, a:visited
@@ -65,7 +73,8 @@ input[type='button'], input[type='submit'], button
   padding: 4px 15px
   letter-spacing: 0.2em
   +border-radius(5px)
-  +gradient_bg($button_bg_gradient_from, $button_bg_gradient_to)
+  +gradient-bg($button_bg_gradient_from, $button_bg_gradient_to)
+  +box-shadow(12, 12, 10)
 
 #flashNotice, #flashWarning, #flashError
   border: solid 1px
@@ -140,7 +149,31 @@ header
     line-height: 0.9em
 
   #footer
-    font-weight: bold
+    min-height: 150px
+    position: absolute
+    left: 0px
+    text-align: center
+
+    #brand
+      font-size: 0.5em
+      width: 100%
+      color: gray
+      vertical-align: bottom
+      position: relative
+      text-align: center
+      *
+        display: inline-block
+
+      #copy
+        width: 22%
+        text-align: left
+        line-height: 48px
+
+      #logo
+        width: 49%
+        text-align: right
+
+
     
 
 @media screen and (min-width: 800px)
