@@ -21,11 +21,12 @@ h1
     width: 200px
 
 p, .p
-  padding: 0.5.5.5.5.5em 0.5em
+  padding: 0
   letter-spacing: 0.05em
   text-align: center
   font-size: 0.8em
   z-index: 1
+  margin-bottom: 1em
 
 #footer
   text-align: center
@@ -97,21 +98,36 @@ input[type='button'], input[type='submit'], button
   background-color: $flash_error_bg_color
   color: $flash_error_color
 
-.topBar
+#topBar
   background-color: $top_bar_bg_color
   border-bottom: solid 2px $top_bar_border_color
   height: 15px
   width: 100%
   position: absolute
   left: 0px
-  
-#contact_bg
-  width: 100%
+  top: 0px
 
+#contact
+  background: url(/images/contact.png) no-repeat center top
+  padding-top: 127px
+  p
+    width: 556px
+    margin: auto auto
+    text-align: justify
+  form
+    margin: 1em auto 1em
+    input[type="text"], input[type="email"]
+      width: 235px
+      height: 22px
+      font-size: 0.6em
+      margin: 1em auto 0em
+      display: block
+    input[type="submit"]
+      margin-top: 2em
+      cursor: pointer
 
-header
-  position: relative
-  top: 20px
+header h1
+  margin-top: 20px
 
 @media screen and (max-width: 200px)
   body
@@ -121,6 +137,14 @@ header
     img
       width: 100%
 
+@media screen and (max-width: 320px)
+  p
+    text-align: justify
+  #contact
+    background-size: 100% auto
+    padding-top: 60px
+    p
+      width: 100%
 
 @media screen and (min-width: 480px)
   body
@@ -130,8 +154,11 @@ header
     img
       width: 240px
 
-  #contact_bg
-    width: 100%
+  #contact
+    background-size: 100% auto
+    padding-top: 80px
+    p
+      width: 80%
 
 @media screen and (min-width: 640px)
   body
@@ -139,11 +166,14 @@ header
     max-width: 800px
     font-size: 1.2em
 
+  #contact
+    background-size: 100% auto
+    padding-top: 100px
+
   h1
     img
       width: 320px
 
-  
   input[type='text'], input[type='email'], input[type='password'], textarea
     font-size: 0.9em
     line-height: 0.9em
@@ -173,9 +203,6 @@ header
         width: 49%
         text-align: right
 
-
-    
-
 @media screen and (min-width: 800px)
   body
     max-width: 1200px
@@ -184,6 +211,12 @@ header
   h1
     img
       width: 416px
+
+  #contact
+    background-size: auto auto
+    padding-top: 130px
+    p
+      width: 556px
 
 @media screen and (min-width: 1200px)
   body
