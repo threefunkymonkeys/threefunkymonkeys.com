@@ -8,7 +8,4 @@
   - if flash[:error] and not flash[:error].empty?
     #flashError
       = flash[:error]
-      %ul.errors
-        - objekt.errors.each do |field, error|
-          %li= "#{field.to_s}: #{error.message}"
 
