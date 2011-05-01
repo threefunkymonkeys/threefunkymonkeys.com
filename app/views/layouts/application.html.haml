@@ -5,8 +5,6 @@
     %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" }
     = stylesheet_link_tag "screen", "site", :media => "screen, projection"
     = stylesheet_link_tag "print", :media => "print"
-    /[if lt IE 8]
-      = stylesheet_link_tag "ie", :media => "screen, projection"
     = csrf_meta_tag
   %body
     .topBar
