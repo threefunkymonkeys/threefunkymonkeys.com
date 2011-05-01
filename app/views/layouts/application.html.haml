@@ -3,31 +3,27 @@
   %head
     %title Three Funky Monkeys
     %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" }
-    = stylesheet_link_tag "screen", "site", :media => "screen, projection"
-    = stylesheet_link_tag "print", :media => "print"
+    = stylesheet_link_tag "site"
     = csrf_meta_tag
   %body
     #topBar
-    = render :partial => 'shared/header'
-    = render :partial => "shared/flash", :locals => {:flash => flash, :objekt => @contact}
-    .container
+
+    #page-content
+      = render :partial => 'shared/header'
+      = render :partial => "shared/flash", :locals => {:flash => flash, :objekt => @contact}
       = yield
 
-    #footer
-      .p.spaced
+    %footer
+      %p
         Si lo preferís podés comunicarte con nosotros directamente vía
         #{mail_to "code@threefunkymonkeys.com", "correo electrónico"} o seguirnos en
         #{link_to "Twitter", "https://twitter.com/3funkymonkeys", :target => :_blank, :rel => :external} y en
         #{link_to "Tumblr", "http://blog.threefunkymonkeys.com/", :target => :_blank, :rel => :external}.
 
+      %p.copyright
+        threefunkymonkeys &copy; 2011 | todos los derechos reservados
+        = image_tag "3fm_footer.png"
 
-      %br
-      %br
-      #brand
-        #copy
-          threefunkymonkeys &copy; 2011 | todos los derechos reservados
-        #logo
-          =image_tag '3fm_footer.png'
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-22262656-1']);
