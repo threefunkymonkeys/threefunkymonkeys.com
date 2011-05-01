@@ -3,9 +3,16 @@
   %head
     %title Three Funky Monkeys
     %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" }
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag "screen", "site", :media => "screen, projection", :cache => true
+    = stylesheet_link_tag "print", :media => "print"
+    /[if lt IE 8]
+      = stylesheet_link_tag "ie", :media => "screen, projection"
     = csrf_meta_tag
   %body
+    .topBar
+    = render :partial => 'shared/header'
+    %br
+    = render :partial => "shared/flash", :locals => {:flash => flash, :objekt => @contact}
     .container
       = yield
 
