@@ -7,9 +7,8 @@
     = stylesheet_link_tag "print", :media => "print"
     = csrf_meta_tag
   %body
-    .topBar
+    #topBar
     = render :partial => 'shared/header'
-    %br
     = render :partial => "shared/flash", :locals => {:flash => flash, :objekt => @contact}
     .container
       = yield
@@ -21,7 +20,7 @@
         #{link_to "Twitter", "https://twitter.com/3funkymonkeys", :target => :_blank, :rel => :external} y en
         #{link_to "Tumblr", "http://blog.threefunkymonkeys.com/", :target => :_blank, :rel => :external}.
 
-      
+
       %br
       %br
       #brand
