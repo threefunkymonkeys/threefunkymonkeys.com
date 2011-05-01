@@ -53,8 +53,19 @@ p, .p
   position: relative
 
 input[type='text'], input[type='email'], input[type='password'], textarea
-  border: solid 1px gray
+  border: solid 1px $text_input_border_color
+  +gradient-bg($text_input_bg_gradient_from, $text_input_bg_gradient_to)
+  +border-radius(5px)
+  padding: 2px
 
+input[type='button'], input[type='submit'], button
+  border: solid 1px $button_border_color
+  color: $button_color
+  font-weight: bold
+  padding: 4px 15px
+  letter-spacing: 0.2em
+  +border-radius(5px)
+  +gradient_bg($button_bg_gradient_from, $button_bg_gradient_to)
 
 #flashNotice, #flashWarning, #flashError
   border: solid 1px
@@ -125,8 +136,8 @@ header
 
   
   input[type='text'], input[type='email'], input[type='password'], textarea
-    font-size: 0.7em
-    line-height: 0.7em
+    font-size: 0.9em
+    line-height: 0.9em
 
   #footer
     font-weight: bold

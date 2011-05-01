@@ -6,6 +6,6 @@ es:
 
   site:
     index:
-      email: Email
-      name:  Nombre
+      email: Tu e-mail
+      name:  Tu nombre
       let_me_know: Avisame

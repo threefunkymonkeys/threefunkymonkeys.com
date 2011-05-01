@@ -17,11 +17,15 @@
     = link_to 'nosotros', about_path
     dejanos tus datos. Te prometemos mantener tu privacidad y no utilizar tus datos con fines deshonestos.
 
-  .p
+  .p.center
     = form_for(@contact) do |f|
       = f.email_field :email, :id => :email, :placeholder => t('.email')
+      %br
+      %br
       = f.text_field :name, :id => :name, :placeholder => t('.name')
-      = f.submit t('.let_me_know'), :id => :let_me_know
+      %br
+      %br
+      = f.submit t('.let_me_know').upcase, :id => :let_me_know
 
   .p.spaced
     Si lo preferís podés comunicarte con nosotros directamente vía
