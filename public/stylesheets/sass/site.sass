@@ -1,111 +1,55 @@
 @import "partials/base"
 
-.brand
-  text-transform: uppercase
-  font-weight: bold
-  .funky
-    color: #fd0300
-    margin: 0 1px
-
 body
   margin: 0
   font:
-    family: Tahoma, Verdana, Arial, sans-serif
+    family: $default_font_family
+    size: $default_font_size
+
+#topBar
+  background-color: $top_bar_bg_color
+  border-bottom: solid $top_bar_border_size $top_bar_border_color
+  height: $top_bar_height - $top_bar_border_size
+
+#page-content
+  max-width: $max_width
+  margin: auto auto
+  text-align: center
 
 h1
   margin: 0
   padding: 0
   text-align: center
 
-  img
-    width: 200px
-
-p, .p
-  padding: 0
-  letter-spacing: 0.05em
+p
+  letter-spacing: $default_letter_spacing
+  line-height: $default_line_height
   text-align: center
-  font-size: 0.8em
-  z-index: 1
+  font-size: $default_font_size
   margin-bottom: 1em
 
-#footer
+footer
   text-align: center
-  font-size: 0.8em
-  width: 100%
   background-color: $footer_bg_color
   color: $footer_color
-  a
-    color: $footer_color
-    &:hover
-      color: $footer_color
-
-
-.cleanLinks
-  a, a:visited
-    color: #000
-    text-decoration: none
-  a:hover
-    color: #fd0300
-
-.spaced
   padding: 1em 0.55em
 
-.half
-  width: 50%
-  left: 25%
-  position: relative
+  p
+    max-width: $max_width
+    margin: auto auto
 
-#homeContainer
-  width: 80%
-  text-align: center
-  left: 10%
-  position: relative
+  a, a:hover
+    color: $footer_color
 
-input[type='text'], input[type='email'], input[type='password'], textarea
-  border: solid 1px $text_input_border_color
-  +gradient-bg($text_input_bg_gradient_from, $text_input_bg_gradient_to)
-  +border-radius(5px)
-  padding: 2px
+  .copyright
+    text-align: left
+    max-width: $max_width
+    margin: auto auto
+    margin-top: 100px
+    font-size: 0.6em
 
-input[type='button'], input[type='submit'], button
-  border: solid 1px $button_border_color
-  color: $button_color
-  font-weight: bold
-  padding: 4px 15px
-  letter-spacing: 0.2em
-  +border-radius(5px)
-  +gradient-bg($button_bg_gradient_from, $button_bg_gradient_to)
-  +box-shadow(12, 12, 10)
-
-#flashNotice, #flashWarning, #flashError
-  border: solid 1px
-  font-size: 0.7em
-  font-weight: bold
-  padding: 0.5em
-
-#flashNotice
-  border-color: $flash_notice_color
-  background-color: $flash_notice_bg_color
-  color: $flash_notice_color
-
-#flashWarning
-  border-color: $flash_warning_color
-  background-color: $flash_warning_bg_color
-  color: $flash_warning_color
-
-#flashError
-  border-color: $flash_error_color
-  background-color: $flash_error_bg_color
-  color: $flash_error_color
-
-#topBar
-  background-color: $top_bar_bg_color
-  border-bottom: solid 2px $top_bar_border_color
-  height: 15px
-  width: 100%
-  position: absolute
-  left: 0px
-  top: 0px
+    img
+      float: right
 
 #contact
   background: url(/images/contact.png) no-repeat center top
@@ -125,101 +69,3 @@ input[type='button'], input[type='submit'], button
     input[type="submit"]
       margin-top: 2em
       cursor: pointer
-
-header h1
-  margin-top: 20px
-
-@media screen and (max-width: 200px)
-  body
-    padding: 0 0.25em
-
-  h1
-    img
-      width: 100%
-
-@media screen and (max-width: 320px)
-  p
-    text-align: justify
-  #contact
-    background-size: 100% auto
-    padding-top: 60px
-    p
-      width: 100%
-
-@media screen and (min-width: 480px)
-  body
-    padding: 0 0.5em
-
-  h1
-    img
-      width: 240px
-
-  #contact
-    background-size: 100% auto
-    padding-top: 80px
-    p
-      width: 80%
-
-@media screen and (min-width: 640px)
-  body
-    padding: 0 1em
-    max-width: 800px
-    font-size: 1.2em
-
-  #contact
-    background-size: 100% auto
-    padding-top: 100px
-
-  h1
-    img
-      width: 320px
-
-  input[type='text'], input[type='email'], input[type='password'], textarea
-    font-size: 0.9em
-    line-height: 0.9em
-
-  #footer
-    min-height: 150px
-    position: absolute
-    left: 0px
-    text-align: center
-
-    #brand
-      font-size: 0.5em
-      width: 100%
-      color: gray
-      vertical-align: bottom
-      position: relative
-      text-align: center
-      *
-        display: inline-block
-
-      #copy
-        width: 22%
-        text-align: left
-        line-height: 48px
-
-      #logo
-        width: 49%
-        text-align: right
-
-@media screen and (min-width: 800px)
-  body
-    max-width: 1200px
-    font-size: 1.4em
-
-  h1
-    img
-      width: 416px
-
-  #contact
-    background-size: auto auto
-    padding-top: 130px
-    p
-      width: 556px
-
-@media screen and (min-width: 1200px)
-  body
-    max-width: 1400px
-    font-size: 1.6em
-    margin: 0 auto
