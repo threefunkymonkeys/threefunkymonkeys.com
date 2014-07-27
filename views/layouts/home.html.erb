@@ -11,33 +11,7 @@
   <body>
     <div id="nav-bg"></div>
     <div id="container" class="container">
-      <header id="header" class="navbar" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <div class="navbar-brand">
-              <img id="logo" src="/img/fcking_monkey.png" />
-              <h1 id="title">Three Funky Monkeys</h1>
-            </div>
-          </div>
-          <ul id="navbar" class="nav navbar-nav navbar-right">
-            <li class="icon">
-              <a href="https://www.facebook.com/3funkymonkeys" target="_blank">
-                <img src="/img/face_big.png" />
-              </a>
-            </li>
-            <li class="icon">
-              <a href="https://www.twitter.com/3funkymonkeys" target="_blank">
-                <img src="/img/twitter_big.png" />
-              </a>
-            </li>
-            <li class="icon">
-              <a href="https://www.linkedin.com/company/three-funky-monkeys" target="_blank">
-                <img src="/img/linkedin_big.png" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </header>
+      <%= partial("shared/_header.html") %>
       <%= yield %>
     </div>
   </body>
