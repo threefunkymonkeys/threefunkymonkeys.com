@@ -13,8 +13,14 @@
     This is the funky website
   </p>
 </div>
+
 <div id="buttons">
-  <a id="what-we-do" class="home-button" href="#what-we-do"><%= I18n.t('what_we_do')%></a>
-  <a id="who-we-are" class="home-button" href="#who-we-are"><%= I18n.t('who_we_are')%></a>
-  <a id="contact-us" class="home-button" href="#contact-us"><%= I18n.t('contact_us')%></a>
+  <a id="what-we-do" class="home-button" href="#we-do"><%= I18n.t('.what_we_do')%></a>
+  <a id="who-we-are" class="home-button" href="#we-are"><%= I18n.t('.who_we_are')%></a>
+  <a id="contact-us" class="home-button" href="#contact"><%= I18n.t('.contact_us')%></a>
+</div>
+
+<div id="sections" class="col-md-12">
+  <h4 id="we-do" class="home-section-title"><%= I18n.t('.what_we_do') %></h4>
+  <p class="section-text col-md-8 col-md-offset-2"><%= I18n.t('.what_we_do_text') %></p>
 </div>

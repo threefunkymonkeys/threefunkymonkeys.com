@@ -145,3 +145,37 @@ header ul.nav li.icon img {
 #buttons > #contact-us {
   background-color: #7BB0A2;
 }
+
+#sections {
+  z-index: 2000;
+  position: relative;
+  top: 142px;
+  padding: 0px;
+}
+
+#sections h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 31px;
+  color: white;
+  text-align: center;
+  padding: 8px 0px;
+  margin: 0px;
+}
+
+#sections > #we-do {
+  background-color: #B14F4A;
+  margin-top: -17px;
+}
+
+#sections > #we-are {
+  background-color: #503A55;
+}
+
+.section-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+  color: #FFF;
+  margin-top: 45px;
+  margin-bottom: 60px;
+}
