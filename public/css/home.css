@@ -1,9 +1,12 @@
 /*font-family: 'Roboto Condensed', sans-serif;*/
 
+.home-title {
+  display: inline-block;
+}
+
 body {
   background-color: #8B897E;
 }
-
 
 #background {
   background-image: url('/img/monkey.jpg');
@@ -66,4 +69,23 @@ header ul#navbar li.icon {
 header ul.nav li.icon img {
   width: 32px;
   height: 32px;
+}
+
+#blog-link {
+  position: relative;
+  margin-top: 20px;
+  float: right;
+}
+
+#blog-link #blog-link-text {
+  position: absolute;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 24px;
+  color: #FFF;
+  margin-left: 16px;
+  margin-top: 18px;
+}
+
+#adorable {
+  margin-top: 150px;
 }
