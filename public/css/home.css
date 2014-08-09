@@ -7,6 +7,7 @@
 
 body {
   background-color: #8B897E;
+  height: 100%;
 }
 
 #background {
@@ -41,6 +42,16 @@ body {
   z-index: 1;
 }
 
+#sections-bg {
+  position: absolute;
+  width: 100%;
+  min-height: 1163px;
+  height: 1163px;
+  background-color: #ABA896;
+  top: 760px;
+  z-index: 1;
+}
+
 header#header {
   position: relative;
   z-index: 2000;
@@ -65,6 +76,29 @@ header img#logo {
   height: 122px;
   margin-top: -20px;
   z-index: 1000;
+}
+
+footer {
+  position: relative;
+  z-index: 2000;
+  border-top: solid 1px #FFF;
+  height: 112px;
+  background-color: #8B897E;
+  margin-top: 1304px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FFF;
+  padding-top: 13px;
+  text-align: center;
+}
+
+#footer-bg {
+  position: relative;
+  width: 100%;
+  height: 112px;
+  background-color: #8B897E;
+  border-top: solid 1px #FFF;
+  top: -112px;
+  z-index: 1;
 }
 
 header ul#navbar {
@@ -170,6 +204,12 @@ header ul.nav li.icon img {
 
 #sections > #we-are {
   background-color: #503A55;
+  margin-top: 275px;
+}
+
+#sections > #contact {
+  background-color: #7BB0A2;
+  margin-top: 608px;
 }
 
 .section-text {
@@ -178,4 +218,57 @@ header ul.nav li.icon img {
   color: #FFF;
   margin-top: 45px;
   margin-bottom: 60px;
+}
+
+.monkey {
+  text-align: center;
+  left: -3.67%;
+}
+
+.monkey > img.thumb {
+  border-radius: 100;
+  width: 180px;
+  height: 180px;
+}
+
+.monkey > div.name {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 26px;
+  color: #594E41;
+}
+
+#bios {
+  padding-top: 50px;
+}
+
+#bios .monkey-bio {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  color: #FFF;
+  margin-bottom: 65px;
+}
+
+#bios #kandalf, #bios #taro {
+}
+
+#social-icons {
+  text-align: center;
+  margin: 30px 0 80px 0;
+}
+
+#social-icons .icon-bg {
+  background-color: white;
+  width: 62px;
+  height: 62px;
+  border-radius: 100;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+#social-icons .icon-bg a {
+  margin-left: -2px;
+}
+
+#social-icons .icon-bg a img {
+  margin-top: -2px;
 }
