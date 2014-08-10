@@ -230,7 +230,7 @@ header ul.nav li.icon img {
 }
 
 .monkey > img.thumb {
-  border-radius: 100;
+  border-radius: 100%;
   width: 180px;
   height: 180px;
 }
@@ -264,7 +264,7 @@ header ul.nav li.icon img {
   background-color: white;
   width: 62px;
   height: 62px;
-  border-radius: 100;
+  border-radius: 100%;
   display: inline-block;
   margin-right: 30px;
 }
