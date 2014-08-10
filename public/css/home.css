@@ -10,6 +10,10 @@ body {
   height: 100%;
 }
 
+.nav li a:hover, .nav li a:focus {
+  background: none;
+}
+
 #background {
   background-image: url('/img/monkey.jpg');
   width: 100%;
