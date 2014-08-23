@@ -50,7 +50,7 @@ body {
   position: absolute;
   width: 100%;
   min-height: 1163px;
-  height: 1163px;
+  height: 1248px;
   background-color: #ABA896;
   top: 760px;
   z-index: 1;
@@ -88,7 +88,7 @@ footer {
   border-top: solid 1px #FFF;
   height: 112px;
   background-color: #8B897E;
-  margin-top: 1304px;
+  margin-top: 1390px;
   font-family: 'Roboto Condensed', sans-serif;
   color: #FFF;
   padding-top: 13px;
@@ -213,7 +213,7 @@ header ul.nav li.icon img {
 
 #sections > #contact {
   background-color: #7BB0A2;
-  margin-top: 608px;
+  margin-top: 712px;
 }
 
 .section-text {
@@ -250,6 +250,7 @@ header ul.nav li.icon img {
   font-size: 18px;
   color: #FFF;
   margin-bottom: 65px;
+  text-align: center;
 }
 
 #bios #kandalf, #bios #taro {
