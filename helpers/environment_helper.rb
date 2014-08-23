@@ -1,8 +1,13 @@
+require 'securerandom'
+
 module ThreeFunkyMonkeys
   ALLOWED_LOCALES = [:en, :es]
-  DEFAULT_LOCALE = :es
+  DEFAULT_LOCALE = :en
 
   module Helpers
+    def self.init_env
+      ENV["SESSION_SECRET"] ||= SecureRandom.uuid
+    end
 
     def init_locale(env)
       if req.params.has_key?('lang') && ALLOWED_LOCALES.include?(req.params['lang'].to_sym)

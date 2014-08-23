@@ -6,6 +6,8 @@ require_relative './helpers/environment_helper'
 I18n.load_path += Dir['./locale/**/*.yml']
 I18n.enforce_available_locales = false
 
+ThreeFunkyMonkeys::Helpers.init_env
+
 Cuba.plugin Cuba::Render
 Cuba.plugin ThreeFunkyMonkeys::Helpers
 
