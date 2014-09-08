@@ -3,10 +3,12 @@ require 'cuba/render'
 require 'i18n'
 require_relative './helpers/environment_helper'
 
+ENV["RACK_ENV"] ||= :development
+
 I18n.load_path += Dir['./locale/**/*.yml']
 I18n.enforce_available_locales = false
 
-ThreeFunkyMonkeys::Helpers.init_env
+ThreeFunkyMonkeys::Helpers.init_environment(ENV['RACK_ENV'])
 
 Cuba.plugin Cuba::Render
 Cuba.plugin ThreeFunkyMonkeys::Helpers

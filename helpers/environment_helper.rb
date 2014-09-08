@@ -5,8 +5,24 @@ module ThreeFunkyMonkeys
   DEFAULT_LOCALE = :en
 
   module Helpers
-    def self.init_env
+    def self.init_environment(env)
+      self.set_env(env)
+
       ENV["SESSION_SECRET"] ||= SecureRandom.uuid
+    end
+
+    def self.set_env(env)
+      filename = env.to_s + ".env.sh"
+
+      if File.exists? filename
+        env_vars = File.read(filename)
+        env_vars.each_line do |var|
+          name, value = var.split("=")
+          if name && value
+            ENV[name.strip] = value.strip
+          end
+        end
+      end
     end
 
     def init_locale(env)
