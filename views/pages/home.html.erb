@@ -1,90 +1,85 @@
-<div id="background">
-  <div id="blog-link">
-    <a href="http://blog.threefunkymonkeys.com" target="_blank">
-      <div id="blog-link-text">BLOG!</div>
-      <img src="/img/blog.png" />
-    </a>
+<div class='full no-padding'>
+  <div class='two spacing'></div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='mod modBoxedSlider'>
+        <div class='slides'>
+          <div class='slide'>
+            <img width="1090" height="545" alt="" src="/img/slider-1.jpg" />
+            <div class='caption'>
+              <p>Consulting</p>
+              <h2>Start something new</h2>
+            </div>
+          </div>
+          <div class='slide'>
+            <img width="1090" height="545" alt="" src="/img/slider-2.jpg" />
+            <div class='caption'>
+              <p>Development</p>
+              <h2>Let us handle complexity</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <h3 id="adorable" class="home-title"><%= I18n.t('.adorable') %></h3>
-  <br>
-  <h1 id="monkeys" class="home-title"><%= I18n.t('.monkeys') %></h1>
-  <p class="big-text">
-    <%= I18n.t('.main_text') %>
-  </p>
 </div>
-
-<div id="buttons">
-  <a id="what-we-do" class="home-button" href="#we-do"><%= I18n.t('.what_we_do')%></a>
-  <a id="who-we-are" class="home-button" href="#we-are"><%= I18n.t('.who_we_are')%></a>
-  <a id="contact-us" class="home-button" href="#contact"><%= I18n.t('.contact_us')%></a>
+<div class='full no-padding'>
+  <div class='spacing'></div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <p style='font-size: 1.5rem; font-style: italic;'>
+       At Three Funky Monkeys, we do what we love and want our cutomers to love what we do. To accomplish this goal, our professionals are fully committed to provide quality service.
+      </p>
+    </div>
+  </div>
+  <hr>
 </div>
-
-<div id="sections" class="col-md-12">
-  <h4 id="we-do" class="home-section-title"><%= I18n.t('.what_we_do') %></h4>
-  <div class="col-md-12">
-    <p class="section-text col-md-8 col-md-offset-2"><%= I18n.t('.what_we_do_text') %></p>
+<div class='two spacing'></div>
+<div class='row' id='services'>
+  <div class='large-12 columns'>
+    <h3>Our services</h3>
+    <div class='two spacing'></div>
   </div>
-  <h4 id="we-are" class="home-section-title"><%= I18n.t('.who_we_are') %></h4>
-  <div id="bios" class="col-md-12">
-    <div class="row">
-      <div id="kandalf" class="monkey col-md-3 col-md-offset-2">
-        <img class="thumb" src="/img/kandalf.jpg" />
-        <div class="name">Leonardo Mateo</div>
+</div>
+<div class='row'>
+  <div class='medium-3 large-3 columns'>
+    <div class='fadein mod modIconText' data-delay='0'>
+      <div class='icon-text-circle'>
+        <i class='fa fa-flask'></i>
+        <h3>New Technologies</h3>
+        <p>New Technologies are around the corner, we continuously study and explore them to provide the best solution to our customers.</p>
       </div>
-      <div id="inkel" class="monkey col-md-3 col-md-offset-3">
-        <img class="thumb" src="/img/inkel.jpg" />
-        <div class="name">Leandro L&oacute;pez</div>
-      </div>
-    </div>
-    <div class="row">
-      <div id='kandalf-bio' class="monkey-bio col-md-4 col-md-offset-1">
-        <div class="nickname"><a href="https://twitter.com/k4nd4lf" target="_blank">@k4nd4lf</a></div>
-        Software Developer
-      </div>
-      <div id='inkel-bio' class="monkey-bio col-md-4 col-md-offset-2">
-        <div class="nickname"><a href="https://twitter.com/inkel" target="_blank">@inkel</a></div>
-        Software Developer
-      </div>
-    </div>
-    <div class="row">
-      <div id="taro" class="monkey col-md-3 col-md-offset-2">
-        <img class="thumb" src="/img/taro.jpg" />
-        <div class="name">Lautaro Orazi</div>
-      </div>
-      <div id="gato" class="monkey col-md-3 col-md-offset-3">
-        <img class="thumb" src="/img/pic_gato.png" />
-        <div class="name">Agust&iacute;n Cabanillas</div>
-      </div>
-    </div>
-    <div class="row">
-      <div id='taro-bio' class="monkey-bio col-md-4 col-md-offset-1">
-        <div class="nickname"><a href="https://twitter.com/tarolandia" target="_blank">@tarolandia</a></div>
-        Software Developer
-      </div>
-      <div id='gato-bio' class="monkey-bio col-md-4 col-md-offset-2">
-        <div class="nickname"><a href="https://twitter.com/gato_garabato" target="_blank">@gato_garabato</a></div>
-        UI/UX Designer
-      </div>
+      <div class='two spacing'></div>
     </div>
   </div>
-
-  <h4 id="contact" class="home-section-title"><%= I18n.t('.contact_us') %></h4>
-  <div id="social-icons" class="row">
-    <div class="icon-bg">
-      <a href="https://www.facebook.com/3funkymonkeys" target="_blank">
-        <img src="/img/face_big.png" />
-      </a>
+  <div class='medium-3 large-3 columns'>
+    <div class='fadein mod modIconText' data-delay='400'>
+      <div class='icon-text-circle'>
+        <i class='fa fa-tablet'></i>
+        <h3>Software Development</h3>
+        <p>Real world problems require simple and highly usable solutions, our full stack professionals make it easy and transparent for our customers.</p>
+      </div>
+      <div class='two spacing'></div>
     </div>
-    <div class="icon-bg">
-      <a href="https://www.twitter.com/3funkymonkeys" target="_blank">
-        <img src="/img/twitter_big.png" />
-      </a>
+  </div>
+  <div class='medium-3 large-3 columns'>
+    <div class='fadein mod modIconText' data-delay='600'>
+      <div class='icon-text-circle'>
+        <i class='fa fa-comments-o'></i>
+        <h3>Software Consulting</h3>
+        <p>Convert your ideas in working solutions. We work side by side with our customers to help them design, build and improve their products.</p>
+      </div>
+      <div class='two spacing'></div>
     </div>
-    <div class="icon-bg">
-      <a href="https://www.linkedin.com/company/three-funky-monkeys" target="_blank">
-        <img src="/img/linkedin_big.png" />
-      </a>
+  </div>
+  <div class='medium-3 large-3 columns'>
+    <div class='fadein mod modIconText' data-delay='200'>
+      <div class='icon-text-circle'>
+        <i class='fa fa-paper-plane-o'></i>
+        <h3>Infrastructure</h3>
+        <p>Infrastructure is hard, we help our customer to design, maintain and scale from less to complex.</p>
+      </div>
+      <div class='two spacing'></div>
     </div>
   </div>
 </div>

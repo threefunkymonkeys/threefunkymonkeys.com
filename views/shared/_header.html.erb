@@ -1,28 +1,58 @@
-<header id="header" class="navbar" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <div class="navbar-brand">
-        <img id="logo" src="/img/fcking_monkey.png" />
-        <h1 id="title">Three Funky Monkeys</h1>
-      </div>
-    </div>
-    <ul id="navbar" class="nav navbar-nav navbar-right">
-      <li class="icon">
-        <a href="https://www.facebook.com/3funkymonkeys" target="_blank">
-          <img src="/img/face_big.png" />
-        </a>
+<div class='contain-to-grid shadowless sticky'>
+  <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+    <ul class='title-area'>
+      <li class='name'>
+        <h1>
+          <a href='/'>
+            <img id="logo-img" alt="ThreeFunkyMonkeys" src="/img/logo.png" />
+          </a>
+        </h1>
       </li>
-      <li class="icon">
-        <a href="https://www.twitter.com/3funkymonkeys" target="_blank">
-          <img src="/img/twitter_big.png" />
-        </a>
-      </li>
-      <li class="icon">
-        <a href="https://www.linkedin.com/company/three-funky-monkeys" target="_blank">
-          <img src="/img/linkedin_big.png" />
-        </a>
+      <li class='toggle-topbar menu-icon'>
+        <a href='#'>Menu</a>
       </li>
     </ul>
-  </div>
-</header>
-
+    <section class='top-bar-section'>
+      <ul class='right mod modScrollTo'>
+        <li class='<%= active_menu("/") %>'>
+          <a href='/'>Home</a>
+        </li>
+        <%#<li class=''>%>
+          <%#<a href='about.html'>About</a>%>
+        <%#</li>%>
+        <li class='<%= active_menu("/services") %>'>
+          <% if home_page? %>
+            <a href='#' class="scrollto" data-target="#services" data-parent="section">Services</a>
+          <% else %>
+            <a href="/#services" data-parent="section">Services</a>
+          <% end %>
+        </li>
+        <%#<li class='has-dropdown'>%>
+          <%#<a href='portfolio.html'>Portfolio</a>%>
+          <%#<ul class='dropdown'>%>
+            <%#<li>%>
+              <%#<a href='portfolio.html'>Portfolio</a>%>
+            <%#</li>%>
+            <%#<li>%>
+              <%#<a href='portfolio-item.html'>Portfolio item</a>%>
+            <%#</li>%>
+          <%#</ul>%>
+        <%#</li>%>
+        <li class='<%= active_menu("/contact") %>'>
+          <a href='/contact'>Contact</a>
+        </li>
+        <%#<li class='has-dropdown'>%>
+          <%#<a href='blog.html'>Blog</a>%>
+          <%#<ul class='dropdown'>%>
+            <%#<li>%>
+              <%#<a href='blog.html'>Blog</a>%>
+            <%#</li>%>
+            <%#<li>%>
+              <%#<a href='single.html'>Blog Single</a>%>
+            <%#</li>%>
+          <%#</ul>%>
+        <%#</li>%>
+      </ul>
+    </section>
+  </nav>
+</div>
