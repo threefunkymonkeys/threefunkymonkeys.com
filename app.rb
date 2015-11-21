@@ -13,6 +13,7 @@ ThreeFunkyMonkeys::Helpers.init_environment(ENV['RACK_ENV'])
 
 Cuba.plugin Cuba::Render
 Cuba.plugin ThreeFunkyMonkeys::Helpers
+Cuba.plugin ThreeFunkyMonkeys::RoutesHelpers
 
 Cuba.use Rack::Session::Cookie, :secret => ENV["SESSION_SECRET"]
 Cuba.use Rack::Static,
@@ -38,6 +39,12 @@ Cuba.define do
     end
 
     on post, root do
+      params = req.params
+      if ThreeFunkyMonkeys::MailerHelpers.send_contact(params)
+        res.write "success"
+      else
+        res.write "error"
+      end
     end
   end
 
