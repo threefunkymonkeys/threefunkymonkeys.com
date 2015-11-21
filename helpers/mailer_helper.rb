@@ -10,7 +10,7 @@ module ThreeFunkyMonkeys
         :key => ENV["MANDRILL_API_KEY"],
         :message => {
           :to => [{
-                    "email" => "info@threefunkymonkeys.com",
+                    "email" => "contact@threefunkymonkeys.com",
                     "name" => "INFO 3FM",
                     "type" => "to"
                   }],
