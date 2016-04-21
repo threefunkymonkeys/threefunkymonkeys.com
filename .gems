@@ -1,3 +1,4 @@
 cuba -v 3.1.1
 i18n -v 0.6.11
 tilt -v 2.0.1
+postmark -v 1.7.1
