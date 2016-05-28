@@ -992,8 +992,6 @@ jQuery(document).foundation();
       var body = $("body");
 
       body.on('click', '.scrollto', function(event) {
-        event.preventDefault();
-
         var _this = $(this);
         var _target = _this.data('target');
         var _parent = _this.data('parent');
