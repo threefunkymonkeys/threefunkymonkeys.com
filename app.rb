@@ -27,21 +27,23 @@ include ThreeFunkyMonkeys::ViewHelpers
 Cuba.define do
   init_locale(req.env)
 
-  on get, root do
+  on root, get do
     render('./pages/home.html')
   end
 
   on 'contact' do
-    on get, root do
-      render('./pages/contact.html')
-    end
+    on root do
+      on get do
+        render('./pages/contact.html')
+      end
 
-    on post, root do
-      params = req.params
-      if ThreeFunkyMonkeys::MailerHelpers.send_contact(params)
-        res.write "success"
-      else
-        res.write "error"
+      on post do
+        params = req.params
+        if ThreeFunkyMonkeys::MailerHelpers.send_contact(params)
+          res.write "success"
+        else
+          res.write "error"
+        end
       end
     end
   end
