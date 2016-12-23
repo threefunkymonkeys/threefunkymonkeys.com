@@ -20,22 +20,20 @@ Cuba.use Rack::Static,
           root: File.expand_path(File.dirname(__FILE__)) + "/public",
           urls: %w[/img /css /js /fonts]
 
+Cuba.settings[:render][:layout] = "layouts/main.html"
+
 include ThreeFunkyMonkeys::ViewHelpers
 
 Cuba.define do
   init_locale(req.env)
 
   on get, root do
-    res.write render('./views/layouts/main.html.erb') {
-      render('./views/pages/home.html.erb')
-    }
+    render('./pages/home.html')
   end
 
   on 'contact' do
     on get, root do
-      res.write render('./views/layouts/main.html.erb') {
-        render('./views/pages/contact.html.erb')
-      }
+      render('./pages/contact.html')
     end
 
     on post, root do
@@ -51,8 +49,6 @@ Cuba.define do
   on default do
     res.status = 404
 
-    res.write render('./views/layouts/main.html.erb') {
-      render('./views/pages/not-found.html.erb')
-    }
+    render('./pages/not-found.html')
   end
 end
