@@ -31,6 +31,12 @@ Cuba.define do
     render('./pages/home.html')
   end
 
+  on 'projects' do
+    on get do
+      render('./pages/projects.html')
+    end
+  end
+
   on 'contact' do
     on root do
       on get do

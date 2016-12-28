@@ -27,6 +27,13 @@
             <a href="/#services" data-parent="section">Services</a>
           <% end %>
         </li>
+        <li class='<%= active_menu("/projects") %>'>
+          <% if home_page? %>
+            <a href='/projects' class="scrollto" data-target="#services" data-parent="section">Projects</a>
+          <% else %>
+            <a href="/projects" data-parent="section">Projects</a>
+          <% end %>
+        </li>
         <%#<li class='has-dropdown'>%>
           <%#<a href='portfolio.html'>Portfolio</a>%>
           <%#<ul class='dropdown'>%>
