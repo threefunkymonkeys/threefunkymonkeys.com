@@ -33,7 +33,15 @@ Cuba.define do
 
   on 'projects' do
     on get do
-      render('./pages/projects.html')
+      on ":id" do |id|
+        project = Project[id]
+
+        render('./pages/project', { project: project })
+      end
+
+      on root do
+        render('./pages/projects', { projects: Project.all })
+      end
     end
   end
 
