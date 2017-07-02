@@ -1,0 +1,55 @@
+<div class='full no-padding'>
+  <div class='two spacing'></div>
+  <div class='row'>
+    <h3>Our Projects</h3>
+    <div class='mod modGallery'>
+      <div class='gallery-nav'>
+<!--        <ul>
+          <li class='current'>
+            <a data-cat='all' href='#'>All</a>
+          </li>
+          <li>
+            <a data-cat='graphic-design' href='#'>Graphic Design</a>
+          </li>
+          <li>
+            <a data-cat='web-design' href='#'>Web Design</a>
+          </li>
+          <li>
+            <a data-cat='brand' href='#'>Brand</a>
+          </li>
+          <li>
+            <a data-cat='development' href='#'>Development</a>
+          </li>
+          <li>
+            <a data-cat='print' href='#'>Print</a>
+          </li>
+        </ul>
+-->
+      </div>
+      <ul class='gallery large-block-grid-3 medium-block-grid-3 seperated small-block-grid-2'>
+        <% projects.each do |project| %>
+          <li class='graphic-design'>
+            <a href="/projects/<%= project.identifier %>">
+              <img width="600" height="500" alt="" src="<%= project.logo_file %>" />
+              <div class='overlay' style='background: rgba(122, 122, 122, 0.8);'>
+                <div class='thumb-info'>
+                  <h3><%= project.name %></h3>
+                  <p><%= project.short_desc %></p>
+                </div>
+              </div>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class='four spacing'></div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <p class='centered-text'>
+        <a class='button' href='#'>See more works</a>
+      </p>
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
