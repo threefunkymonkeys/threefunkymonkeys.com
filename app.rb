@@ -2,7 +2,7 @@ require 'cuba'
 require 'cuba/render'
 require 'i18n'
 
-ENV["RACK_ENV"] ||= :development
+ENV["RACK_ENV"] ||= "development"
 
 Dir["./helpers/**/*.rb"].each { |rb| require rb }
 
