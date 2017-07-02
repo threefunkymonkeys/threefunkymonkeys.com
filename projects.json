@@ -1,0 +1,47 @@
+{
+  "chist": {
+    "name": "Chist",
+    "short_desc": "Share your chats with style",
+    "description": "Chist is a web application to share your chats from different sources (Skype, IRC, Slack) in a unified style. When you work in a distributed team, chatting with different people and then having to communicate the minutes of your conversation to other team members becomes a really common situation. Chist helps you doing that. Share a “chist” of your chats",
+    "date": "Februry 2014",
+    "website": "https://ichist.com",
+    "url": "https://github.com/threefunkymonkeys/chist",
+    "logo_file": "/img/chist_logo.svg"
+  },
+  "funky-world-cup": {
+    "name": "Funky World Cup",
+    "short_desc": "Predictions Game for FIFA 2014 WC",
+    "description": "Funky World Cup is a match predictions website for the FIFA World Cup, that allows you to create groups so you can play with your friends defining prices.",
+    "date": "July 2014",
+    "website": "https://funkyworldcup.com",
+    "url": "https://github.com/threefunkymonkeys/funky-world-cup",
+    "logo_file": "/img/fwc_logo.svg"
+  },
+  "bluetail": {
+    "name": "Bluetail",
+    "short_desc": "Tweet simply from your app",
+    "description": "Named after a kind of blue bird, Bluetail is a small, easy to use Ruby library to make Twitter posts with your apps. This library is a spin-off of the Funky World Cup project.",
+    "date": "July 2014",
+    "website": "https://rubygems.org/gems/bluetail",
+    "url": "https://github.com/threefunkymonkeys/bluetail",
+    "logo_file": "/img/bluetail_logo.svg"
+  },
+  "crocodile": {
+    "name": "Crocodile",
+    "short_desc": "Background jobs in Ruby",
+    "description": "Crocodile is a gem for running periodic [background] jobs written in Ruby. Crocodile provides a worker binary that's in charge of running the jobs you define, it also provides a base class for those jobs. This library is a spin-off of the Funky World Cup project.",
+    "date": "July 2015",
+    "website": "https://rubygems.org/gems/crocodile",
+    "url": "https://github.com/threefunkymonkeys/crocodile",
+    "logo_file": "/img/crocodile_logo.svg"
+  },
+  "cuba-flash": {
+    "name": "Cuba Flash",
+    "short_desc": "Background jobs in Ruby",
+    "description": "Cuba Flash provides flash-style messages to Cuba apps. Flash messages are shown only once, they are used to show notifications after a certain operations in a web app",
+    "date": "May 2015",
+    "website": "https://rubygems.org/gems/cuba-flash",
+    "url": "https://github.com/threefunkymonkeys/cuba-flash",
+    "logo_file": "/img/cuba_flash_logo.svg"
+  }
+}

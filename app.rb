@@ -5,6 +5,7 @@ require 'i18n'
 ENV["RACK_ENV"] ||= "development"
 
 Dir["./helpers/**/*.rb"].each { |rb| require rb }
+Dir["./models/**/*.rb"].each  { |rb| require rb }
 
 I18n.load_path += Dir['./locale/**/*.yml']
 I18n.enforce_available_locales = false
