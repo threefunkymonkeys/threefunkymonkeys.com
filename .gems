@@ -2,3 +2,4 @@ cuba -v 3.8.0
 i18n -v 0.7.0
 tilt -v 2.0.5
 postmark -v 1.10.0
+scoped-concerns -v 0.1.0

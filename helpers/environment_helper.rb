@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'logger'
 
 module ThreeFunkyMonkeys
   ALLOWED_LOCALES = [:en, :es]
@@ -37,5 +38,15 @@ module ThreeFunkyMonkeys
       I18n.locale = session[:locale]
     end
 
+    def logger
+      log_level = ENV["LOG_LEVEL"] || :warn
+      output = ENV["LOG_OUTPUT"] || STDOUT
+
+      @@logger ||= Proc.new {
+        logger = Logger.new(output)
+        logger.level = log_level
+        logger
+      }.call
+    end
   end
 end

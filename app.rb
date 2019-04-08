@@ -1,11 +1,13 @@
 require 'cuba'
 require 'cuba/render'
 require 'i18n'
+require 'scoped-concerns'
 
 ENV["RACK_ENV"] ||= "development"
 
-Dir["./helpers/**/*.rb"].each { |rb| require rb }
-Dir["./models/**/*.rb"].each  { |rb| require rb }
+Dir["./helpers/**/*.rb"].each  { |rb| require rb }
+Dir["./models/**/*.rb"].each   { |rb| require rb }
+Dir["./concerns/**/*.rb"].each { |rb| require rb }
 
 I18n.load_path += Dir['./locale/**/*.yml']
 I18n.enforce_available_locales = false
@@ -54,10 +56,19 @@ Cuba.define do
 
       on post do
         params = req.params
-        if ThreeFunkyMonkeys::MailerHelpers.send_contact(params)
+
+        spam_check = ThreeFunkyMonkeys::Concerns::CheckSpam.run(params)
+
+        unless spam_check.success?
+          #Just do nothing and emulate success
+          logger.error("SPAM: #{params["message"]}")
           res.write "success"
         else
-          res.write "error"
+          if ThreeFunkyMonkeys::MailerHelpers.send_contact(params)
+            res.write "success"
+          else
+            res.write "error"
+          end
         end
       end
     end
